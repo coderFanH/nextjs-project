@@ -12,7 +12,7 @@ export default function Page() {
   const [showPassword, setShowPassword] = useState(true);
   const [formData, setFormData] = useState({});
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,

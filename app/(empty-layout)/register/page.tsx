@@ -14,7 +14,7 @@ export default function Page() {
   });
   const [errMes, setErrMes] = useState('');
 
-  const submitHander = async (e) => {
+  const submitHander = async (e: any) => {
     e.preventDefault();
     register(formData).catch((err) => {
       setError(true);
@@ -22,7 +22,7 @@ export default function Page() {
     });
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,

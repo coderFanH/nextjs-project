@@ -2,7 +2,7 @@ import { RenderingInfo } from '@/app/ui/rendering-info';
 
 export default async function Page() {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/1`, {
-    cache: 'no-store',
+    cache: 'force-cache',
   });
   const data = (await res.json()) as { title: string; body: string };
 
